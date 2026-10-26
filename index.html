@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Closet Loop — Dale otra vuelta a tu estilo</title>
+  <meta name="description" content="Closet Loop organiza tu clóset, sugiere outfits con IA y conecta una comunidad para intercambiar y prestar ropa. Combina, intercambia, repite.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='24' cy='32' r='15' fill='none' stroke='%231E2761' stroke-width='6'/%3E%3Ccircle cx='41' cy='32' r='15' fill='none' stroke='%235C9279' stroke-width='6'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <!-- ================= NAVEGACIÓN ================= -->
+  <header class="cabecera" id="inicio">
+    <div class="envoltura cabecera-inner">
+      <a class="logo" href="#inicio" aria-label="Closet Loop, ir al inicio">
+        <svg class="anillos" viewBox="0 0 46 30" aria-hidden="true"><circle class="an1" cx="15" cy="15" r="10.5"/><circle class="an2" cx="31" cy="15" r="10.5"/></svg>
+        <span class="logo-texto">closet&nbsp;<b>loop</b></span>
+      </a>
+
+      <nav class="nav" aria-label="Secciones">
+        <ul>
+          <li><a class="nav-enlace" href="#idea">La idea</a></li>
+          <li><a class="nav-enlace" href="#app">La app</a></li>
+          <li><a class="nav-enlace" href="#comunidad">Comunidad</a></li>
+          <li><a class="nav-enlace" href="#circular">Circular</a></li>
+          <li><a class="nav-enlace" href="#ruta">Ruta</a></li>
+          <li><a class="nav-enlace" href="#equipo">Equipo</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn-primario btn-compacto cabecera-cta" href="#app">Probar la demo</a>
+
+      <button class="menu-boton" id="menuBoton" type="button" aria-expanded="false" aria-controls="menuMovil" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="menu-movil" id="menuMovil" hidden aria-label="Menú móvil">
+      <ul>
+        <li><a href="#idea">La idea</a></li>
+        <li><a href="#app">La app</a></li>
+        <li><a href="#comunidad">Comunidad</a></li>
+        <li><a href="#circular">Circular</a></li>
+        <li><a href="#ruta">Ruta</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+      </ul>
+      <a class="btn btn-primario" href="#app">Probar la demo</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" aria-labelledby="tituloHero">
+      <div class="envoltura hero-grida">
+        <div class="hero-texto">
+          <p class="eyebrow">
+            <svg viewBox="0 0 26 16" aria-hidden="true"><circle cx="7.5" cy="8" r="5.8"/><circle cx="18.5" cy="8" r="5.8"/></svg>
+            Moda circular con IA
+          </p>
+          <h1 id="tituloHero">Dale <span class="acento">otra vuelta<svg class="subrayado" viewBox="0 0 140 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 10.5C40 3.5 95 3 137 8.5" vector-effect="non-scaling-stroke"/></svg></span> a tu estilo.</h1>
+          <p class="hero-sub">Tu clóset ya tiene lo que buscas. Closet Loop organiza tus prendas, sugiere outfits con IA y te conecta con una comunidad para intercambiar y prestar ropa.</p>
+          <div class="hero-acciones">
+            <a class="btn btn-primario" href="#app">
+              Probar la demo
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-7 7 7-7 7"/></svg>
+            </a>
+            <a class="btn btn-fantasma" href="#idea">Cómo funciona</a>
+          </div>
+          <p class="hero-nota">
+            <svg class="anillos anillos--mini" viewBox="0 0 46 30" aria-hidden="true"><circle class="an1" cx="15" cy="15" r="10.5"/><circle class="an2" cx="31" cy="15" r="10.5"/></svg>
+            Organiza&nbsp;·&nbsp;Combina&nbsp;·&nbsp;Intercambia
+          </p>
+        </div>
+
+        <div class="hero-visual">
+          <svg class="hero-anillos" viewBox="0 0 300 200" aria-hidden="true"><circle cx="110" cy="100" r="88"/><circle cx="190" cy="100" r="88"/></svg>
+          <div class="marco marco-1" data-marco>
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1000&auto=format&fit=crop" alt="Joven con abrigo mostaza y camisa blanca en un look urbano de inspiración editorial" fetchpriority="high">
+          </div>
+          <div class="marco marco-2" data-marco>
+            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800&auto=format&fit=crop" alt="Joven con gafas de sol y estilo desenfadado entre flores" loading="lazy">
+          </div>
+          <p class="hero-chip">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a2 2 0 0 1 2 2v16l-7-4.2L5 21V5a2 2 0 0 1 2-2Z"/></svg>
+            Idea guardada
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LA IDEA (problema y promesa) ================= -->
+    <section class="idea" id="idea" aria-labelledby="tituloIdea">
+      <div class="envoltura">
+        <div class="seccion-cab rv">
+          <p class="eyebrow eyebrow--claro">
+            <svg viewBox="0 0 26 16" aria-hidden="true"><circle cx="7.5" cy="8" r="5.8"/><circle cx="18.5" cy="8" r="5.8"/></svg>
+            La idea
+          </p>
+          <h2 id="tituloIdea">Un clóset lleno… y esa sensación de «no tengo nada que ponerme».</h2>
+        </div>
+
+        <div class="idea-momentos">
+          <article class="momento rv">
+            <p class="momento-hora">07:42 a.&nbsp;m.</p>
+            <h3>Antes de clase</h3>
+            <p>El piso parece tienda en liquidación y terminas eligiendo lo de siempre. Otra vez.</p>
+          </article>
+          <article class="momento rv">
+            <p class="momento-hora">19:00</p>
+            <h3>Plan del viernes</h3>
+            <p>Miras el clóset, suspiras y decides que «nada combina». Spoiler: combina.</p>
+          </article>
+          <article class="momento rv">
+            <p class="momento-hora">Domingo</p>
+            <h3>La gran ordenada</h3>
+            <p>Aparecen prendas con etiqueta. Algunas jamás estrenadas.</p>
+          </article>
+        </div>
+
+        <div class="idea-promesa rv">
+          <p class="promesa">No necesitas más ropa.<br><span>Necesitas nuevas ideas.</span></p>
+          <p class="concepto">«Loop» es el ciclo continuo de reutilizar, combinar e intercambiar: la ropa vuelve a circular en vez de acumularse o desecharse.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LA APP (demo del escáner) ================= -->
+    <section class="app" id="app" aria-labelledby="tituloApp">
+      <div class="envoltura app-grida">
+        <div class="app-intro">
+          <div class="seccion-cab rv">
+            <p class="eyebrow">
+              <svg viewBox="0 0 26 16" aria-hidden="true"><circle cx="7.5" cy="8" r="5.8"/><circle cx="18.5" cy="8" r="5.8"/></svg>
+              La app
+            </p>
+            <h2 id="tituloApp">Escanea tu look. Recibe ideas al instante.</h2>
+            <p class="prosa">Toma una foto de tu outfit y la IA identifica prendas, colores y silueta para sugerirte cómo elevarlo con lo que ya tienes. Sin juicios: es una amiga que sabe de moda, no una crítica.</p>
+          </div>
+
+          <ol class="pasos">
+            <li class="rv">
+              <span class="paso-num" aria-hidden="true">1</span>
+              <div><h3>Elige o toma la foto</h3><p>Un outfit del día, directo desde la app.</p></div>
+            </li>
+            <li class="rv">
+              <span class="paso-num" aria-hidden="true">2</span>
+              <div><h3>Deja que escanee</h3><p>La IA detecta tus prendas y las guarda en tu clóset digital.</p></div>
+            </li>
+            <li class="rv">
+              <span class="paso-num" aria-hidden="true">3</span>
+              <div><h3>Recibe ideas</h3><p>Combinaciones nuevas con tu propio clóset y piezas de la comunidad.</p></div>
+            </li>
+          </ol>
+
+          <p class="nota-demo rv">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M12 11v5"/></svg>
+            Prototipo interactivo: la detección de prendas se simula en esta demostración.
+          </p>
+          <noscript><p class="nota-demo">Activa JavaScript para probar el escáner simulado.</p></noscript>
+        </div>
+
+        <div class="app-demo rv">
+          <div class="telefono">
+            <div class="telefono-pantalla" id="pantalla" data-estado="reposo">
+              <header class="pantalla-cab">
+                <svg class="anillos anillos--mini" viewBox="0 0 46 30" aria-hidden="true"><circle class="an1" cx="15" cy="15" r="10.5"/><circle class="an2" cx="31" cy="15" r="10.5"/></svg>
+                <span class="pantalla-titulo">Escáner de outfit</span>
+                <span class="pantalla-contador" id="contadorLooks">1 de 3</span>
+              </header>
+
+              <figure class="pantalla-foto" data-marco>
+                <img id="scanFoto" class="lista" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=640&auto=format&fit=crop" alt="Look 1: modelo con blazer rosa, top blanco y jeans" loading="lazy">
+                <div class="escaner" aria-hidden="true">
+                  <span class="esq esq-1"></span><span class="esq esq-2"></span>
+                  <span class="esq esq-3"></span><span class="esq esq-4"></span>
+                  <span class="escaner-linea"></span>
+                </div>
+                <figcaption class="pantalla-estado">
+                  <span id="estadoTexto">Listo para escanear</span>
+                  <span class="puntos" aria-hidden="true"><i></i><i></i><i></i></span>
+                </figcaption>
+              </figure>
+
+              <div class="hoja" id="hoja" aria-hidden="true">
+                <div class="hoja-cab">
+                  <div class="indice">
+                    <svg class="indice-anillo" viewBox="0 0 48 48" aria-hidden="true">
+                      <circle class="indice-pista" cx="24" cy="24" r="20"/>
+                      <circle class="indice-arco" id="indiceArco" cx="24" cy="24" r="20"/>
+                    </svg>
+                    <div class="indice-datos"><b id="indiceValor">—</b><span>Índice Loop</span></div>
+                  </div>
+                  <p class="hoja-etiquetas" id="hojaEtiquetas"></p>
+                </div>
+                <ul class="hoja-prendas" id="listaPrendas" aria-label="Prendas detectadas"></ul>
+                <p class="hoja-nota" id="hojaNota"></p>
+                <p class="hoja-sug-titulo">Suma desde tu clóset</p>
+                <ul class="hoja-sug-lista" id="hojaSugerencias" aria-label="Sugerencias de estilo"></ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="demo-controles">
+            <button class="btn btn-primario" id="btnEscanear" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2M4 12h16"/></svg>
+              <span id="btnEscanearTexto">Escanear outfit</span>
+            </button>
+            <button class="btn btn-fantasma" id="btnOtro" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66"/><path d="M20 4v4h-4"/></svg>
+              Otro look
+            </button>
+          </div>
+          <p class="sr" aria-live="polite" id="anuncioDemo"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COMUNIDAD ================= -->
+    <section class="comunidad" id="comunidad" aria-labelledby="tituloComunidad">
+      <div class="envoltura">
+        <div class="seccion-cab seccion-cab--fila rv">
+          <div>
+            <p class="eyebrow">
+              <svg viewBox="0 0 26 16" aria-hidden="true"><circle cx="7.5" cy="8" r="5.8"/><circle cx="18.5" cy="8" r="5.8"/></svg>
+              Comunidad
+            </p>
+            <h2 id="tituloComunidad">Estilo que circula, estilo que se comparte.</h2>
+          </div>
+          <p class="prosa comunidad-intro">Guarda looks que te inspiren, descubre cómo combinan otros lo mismo que tú ya tienes y encuentra prendas que buscan un nuevo dueño.</p>
+        </div>
+
+        <p class="nota-demo rv">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M12 11v5"/></svg>
+          Vista de demostración: las personas y prendas son ejemplos.
+        </p>
+
+        <div class="mosaico">
+          <figure class="mosaico-item mi-a rv" data-marco>
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=900&auto=format&fit=crop" alt="Outfit con vestido estampado de inspiración editorial" loading="lazy">
+            <button class="guardar" type="button" aria-pressed="false" aria-label="Guardar look de @vale.estilo">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a2 2 0 0 1 2 2v16l-7-4.2L5 21V5a2 2 0 0 1 2-2Z"/></svg>
+            </button>
+            <figcaption class="mosaico-pie"><div><b>@vale.estilo</b><span>Estampados para jueves de clase</span></div></figcaption>
+          </figure>
+
+          <figure class="mosaico-item mi-b rv" data-marco>
+            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=700&auto=format&fit=crop" alt="Retrato de joven con aretes y estilo cuidado" loading="lazy">
+            <button class="guardar" type="button" aria-pressed="false" aria-label="Guardar look de @maria.crea">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a2 2 0 0 1 2 2v16l-7-4.2L5 21V5a2 2 0 0 1 2-2Z"/></svg>
+            </button>
+            <figcaption class="mosaico-pie"><div><b>@maria.crea</b><span>Basics, pero con actitud</span></div></figcaption>
+          </figure>
+
+          <figure class="mosaico-item mi-c rv" data-marco>
+            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=700&auto=format&fit=crop" alt="Look urbano con chaqueta amarilla" loading="lazy">
+            <button class="guardar" type="button" aria-pressed="false" aria-label="Guardar look de @joss.lk">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a2 2 0 0 1 2 2v16l-7-4.2L5 21V5a2 2 0 0 1 2-2Z"/></svg>
+            </button>
+            <figcaption class="mosaico-pie"><div><b>@joss.lk</b><span>El amarillo no pide permiso</span></div></figcaption>
+          </figure>
+
+          <figure class="mosaico-item mi-d rv" data-marco>
+            <img src="https://images.unsplash.com/photo-1495385794356-15371f348c31?q=80&w=700&auto=format&fit=crop" alt="Joven caminando en la calle con un outfit casual completo" loading="lazy">
+            <button class="guardar" type="button" aria-pressed="false" aria-label="Guardar look de @sofi.loop">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a2 2 0 0 1 2 2v16l-7-4.2L5 21V5a2 2 0 0 1 2-2Z"/></svg>
+            </button>
+            <figcaption class="mosaico-pie"><div><b>@sofi.loop</b><span>Camisa de mi hermana, estilo mío</span></div></figcaption>
+          </figure>
+
+          <figure class="mosaico-item mi-e rv" data-marco>
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=700&auto=format&fit=crop" alt="Retrato sonriente de joven con estilo relajado" loading="lazy">
+            <button class="guardar" type="button" aria-pressed="false" aria-label="Guardar look de @dani.wears">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a2 2 0 0 1 2 2v16l-7-4.2L5 21V5a2 2 0 0 1 2-2Z"/></svg>
+            </button>
+            <figcaption class="mosaico-pie"><div><b>@dani.wears</b><span>Domingo sin esfuerzo</span></div></figcaption>
+          </figure>
+
+          <figure class="mosaico-item mi-f rv" data-marco>
+            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=700&auto=format&fit=crop" alt="Clóset con chaquetas y prendas en perchas" loading="lazy">
+            <figcaption class="mosaico-pie"><div><b>@val.closet</b><span>Clóset abierto: presta e intercambia</span></div></figcaption>
+          </figure>
+
+          <article class="m-intercambio mi-g rv" id="tarjetaIntercambio">
+            <div class="intercambio-top">
+              <div class="intercambio-thumb" data-marco>
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=400&auto=format&fit=crop" alt="Prendas en perchas listas para una nueva vida" loading="lazy">
+              </div>
+              <div>
+                <p class="intercambio-kicker">Intercambio sugerido</p>
+                <h3>Chaqueta vaquera oversize</h3>
+                <p class="intercambio-meta">Talla M · Excelente estado · de <b>@val.closet</b></p>
+              </div>
+            </div>
+            <p class="intercambio-busca">Busca: camisas de color o botas de plataforma.</p>
+            <div class="intercambio-pie">
+              <button class="btn btn-primario btn-compacto" id="btnIntercambio" type="button">
+                <span class="etq-enviar">Proponer intercambio</span>
+                <span class="etq-enviada" hidden>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+                  Propuesta enviada
+                </span>
+              </button>
+              <p class="intercambio-aviso" id="avisoIntercambio" hidden>Es una demo: nadie la recibió… todavía.</p>
+            </div>
+            <p class="sr" aria-live="polite" id="anuncioIntercambio"></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MODA CIRCULAR ================= -->
+    <section class="circular" id="circular" aria-labelledby="tituloCircular">
+      <div class="envoltura">
+        <div class="circular-cab rv">
+          <div>
+            <p class="eyebrow eyebrow--honda">
+              <svg viewBox="0 0 26 16" aria-hidden="true"><circle cx="7.5" cy="8" r="5.8"/><circle cx="18.5" cy="8" r="5.8"/></svg>
+              Moda circular
+            </p>
+            <h2 id="tituloCircular">La ropa ya existe.<br>Hagámosla durar.</h2>
+          </div>
+          <p class="prosa">Cada prenda que vuelve a circular es una que no hay que fabricar otra vez. Reutilizar, combinar e intercambiar no es un sacrificio: es la forma más divertida de estrenar sin estrenar.</p>
+        </div>
+
+        <figure class="figura-circular rv" data-marco>
+          <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1600&auto=format&fit=crop" alt="Pila de camisetas dobladas en tonos neutros" loading="lazy">
+          <figcaption class="figura-nota">El clóset más sostenible es el que ya tienes.</figcaption>
+        </figure>
+
+        <div class="circular-grida">
+          <div class="ciclo-col rv">
+            <p class="ciclo-titulo">El ciclo Closet Loop</p>
+            <div class="ciclo">
+              <ol class="ciclo-pasos">
+                <li>Reutilizar</li>
+                <li class="ciclo-flecha" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15m-6-7 7 7-7 7"/></svg></li>
+                <li>Combinar</li>
+                <li class="ciclo-flecha" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15m-6-7 7 7-7 7"/></svg></li>
+                <li>Intercambiar</li>
+              </ol>
+              <div class="ciclo-retorno" aria-hidden="true">
+                <svg viewBox="0 0 620 56" preserveAspectRatio="none">
+                  <path class="ciclo-curva" d="M600 6 C 470 52, 150 52, 34 14" vector-effect="non-scaling-stroke"/>
+                  <path class="ciclo-punta" d="M48 5 L32 14 L50 19" vector-effect="non-scaling-stroke"/>
+                </svg>
+                <p class="ciclo-nota">…y vuelve a empezar</p>
+              </div>
+              <p class="ciclo-nota-movil">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66"/><path d="M20 4v4h-4"/></svg>
+                …y vuelve a empezar
+              </p>
+            </div>
+
+            <blockquote class="mision">
+              <p class="mision-label">Nuestra misión</p>
+              <p>Una app que organiza el clóset, sugiere outfits con IA y conecta a una comunidad para intercambiar y prestar ropa de forma sostenible.</p>
+            </blockquote>
+          </div>
+
+          <ul class="valores">
+            <li class="rv">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 19C5 10 11 4 20 4c0 9-6 15-14 15Z"/><path d="M6 19c2.5-5.5 6-8.5 10-10.5"/></svg>
+              <div><h3>Sostenibilidad</h3><p>Cada decisión reduce el desperdicio textil.</p></div>
+            </li>
+            <li class="rv">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 18h5M10 21h4"/><path d="M12 3a6 6 0 0 1 3.5 10.9c-.8.6-1 1.3-1 2.1h-5c0-.8-.2-1.5-1-2.1A6 6 0 0 1 12 3Z"/></svg>
+              <div><h3>Innovación</h3><p>La IA como herramienta creativa, no complicada.</p></div>
+            </li>
+            <li class="rv">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6s4.9 1.6 5.5 4.6"/><circle cx="16.5" cy="9" r="2.6"/><path d="M15.5 14.6c2.3.2 4.1 1.6 4.8 4.4"/></svg>
+              <div><h3>Comunidad</h3><p>Compartir es parte del estilo, no un sacrificio.</p></div>
+            </li>
+            <li class="rv">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.6-9-9a4.8 4.8 0 0 1 9-2.4A4.8 4.8 0 0 1 21 11c-2 4.4-9 9-9 9Z"/></svg>
+              <div><h3>Autenticidad</h3><p>Estilo propio, no tendencias impuestas.</p></div>
+            </li>
+            <li class="rv">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5H11L9.5 22 19 10h-6.5L13 2Z"/></svg>
+              <div><h3>Practicidad</h3><p>Menos minutos decidiendo, más disfrutando.</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= RUTA ================= -->
+    <section class="ruta" id="ruta" aria-labelledby="tituloRuta">
+      <div class="envoltura">
+        <div class="seccion-cab rv">
+          <p class="eyebrow eyebrow--claro">
+            <svg viewBox="0 0 26 16" aria-hidden="true"><circle cx="7.5" cy="8" r="5.8"/><circle cx="18.5" cy="8" r="5.8"/></svg>
+            Ruta del proyecto
+          </p>
+          <h2 id="tituloRuta">Validar. Lanzar. Escalar.</h2>
+          <p class="prosa">Un plan corto y honesto, en tres vueltas.</p>
+        </div>
+
+        <ol class="fases">
+          <li class="fase rv">
+            <span class="fase-num" aria-hidden="true">01</span>
+            <h3>Validar</h3>
+            <p>Llevar el prototipo a estudiantes reales: entrevistas, pruebas y mucho feedback antes de construir la app completa.</p>
+          </li>
+          <li class="fase rv">
+            <span class="fase-num" aria-hidden="true">02</span>
+            <h3>Lanzar</h3>
+            <p>Estrenar la primera versión: escáner de clóset, sugerencias con IA e intercambios dentro de la comunidad.</p>
+          </li>
+          <li class="fase rv">
+            <span class="fase-num" aria-hidden="true">03</span>
+            <h3>Escalar</h3>
+            <p>Crecer de campus en campus hasta hacer de la moda circular con IA el nuevo normal en Centroamérica.</p>
+          </li>
+        </ol>
+
+        <p class="ruta-vision rv">
+          <svg class="anillos" viewBox="0 0 46 30" aria-hidden="true"><circle class="an1" cx="15" cy="15" r="10.5"/><circle class="an2" cx="31" cy="15" r="10.5"/></svg>
+          <span><b>Nuestra visión:</b> ser la plataforma líder de moda circular impulsada por IA en Centroamérica, cambiando la forma en que los jóvenes se relacionan con su ropa.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= CIERRE ================= -->
+    <section class="cierre" aria-labelledby="tituloCierre">
+      <div class="envoltura cierre-inner rv">
+        <svg class="cierre-anillos" viewBox="0 0 120 76" aria-hidden="true"><circle class="c1" cx="42" cy="38" r="28"/><circle class="c2" cx="78" cy="38" r="28"/></svg>
+        <h2 id="tituloCierre">Combina, intercambia, repite.</h2>
+        <p>Dale otra vuelta a tu estilo. Estamos construyendo Closet Loop y nos encantaría saber qué le pondrías tú.</p>
+        <div class="cierre-acciones">
+          <a class="btn btn-lavanda" href="mailto:hola@closetloop.app">Escríbenos</a>
+          <a class="btn btn-fantasma btn-fantasma--claro" href="#app">Volver a la demo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= PIE ================= -->
+  <footer class="pie">
+    <div class="envoltura pie-grida">
+      <div class="pie-marca">
+        <a class="logo logo--claro" href="#inicio" aria-label="Closet Loop, volver al inicio">
+          <svg class="anillos" viewBox="0 0 46 30" aria-hidden="true"><circle class="an1" cx="15" cy="15" r="10.5"/><circle class="an2" cx="31" cy="15" r="10.5"/></svg>
+          <span class="logo-texto">closet&nbsp;<b>loop</b></span>
+        </a>
+        <p>Dale otra vuelta a tu estilo.</p>
+      </div>
+
+      <nav class="pie-col" aria-label="Secciones del pie">
+        <p class="pie-titulo">Explora</p>
+        <ul>
+          <li><a href="#idea">La idea</a></li>
+          <li><a href="#app">La app</a></li>
+          <li><a href="#comunidad">Comunidad</a></li>
+          <li><a href="#circular">Circular</a></li>
+          <li><a href="#ruta">Ruta</a></li>
+          <li><a href="#equipo">Equipo</a></li>
+        </ul>
+      </nav>
+
+      <div class="pie-col">
+        <p class="pie-titulo">Contacto</p>
+        <ul>
+          <li><a href="mailto:hola@closetloop.app">hola@closetloop.app</a></li>
+          <li><span>closetloop.app</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="envoltura pie-legal">
+      <p>© 2026 Closet Loop</p>
+      <p>Proyecto académico · Grupo #2 — Generación de Empresas 1 · Manual de marca v1</p>
+    </div>
+  </footer>
+</body>
+</html>
