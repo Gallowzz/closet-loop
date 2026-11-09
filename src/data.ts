@@ -67,7 +67,7 @@ export const ICONS: Record<string, string> = {
   'info': 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18|M12 16v-4|M12 8h.01',
 };
 
-export async function joinWaitlist(email: string) {
+export async function joinWaitlist(_email: string) {
   await new Promise(r => setTimeout(r, 900));
   return { ok: true, demo: true };
 }
